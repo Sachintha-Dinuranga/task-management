@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TaskList</string>
+    <string name="new_title">Title</string>
+    <string name="new_description">Description</string>
+    <string name="Send">Send</string>
+    <string name="update_title">Enter updated Title</string>
+    <string name="update_description">Enter updated Description</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="create">Create</string>
+    <string name="edit">Edit</string>
+    <string name="description">Description here</string>
+    <string name="title">Title</string>
+</resources>
