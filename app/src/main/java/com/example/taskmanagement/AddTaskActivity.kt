@@ -22,12 +22,22 @@ class AddTaskActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_task)
 
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         etTitle = findViewById(R.id.et_title)
         etDescription = findViewById(R.id.et_description)
         fabSend = findViewById(R.id.fab_send)
 
         fabSend.setOnClickListener {
             fabSendData()
+        }
+
+        val fabBack = findViewById<FloatingActionButton>(R.id.fab_back)
+        fabBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            // These flags will ensure that MainActivity is started anew and all other activities are cleared from the stack
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
         }
 
     }
@@ -64,5 +74,10 @@ class AddTaskActivity : AppCompatActivity() {
         return (etTitle.editText?.text.toString().isNotEmpty()
                 && etDescription.editText?.text.toString().isNotEmpty())
     }
+
+//    override fun onSupportNavigateUp(): Boolean {
+//        onBackPressed()
+//        return true
+//    }
 
 }
