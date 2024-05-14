@@ -32,7 +32,7 @@ class DBOpenHelper(context: Context) : SQLiteOpenHelper(
     companion object {
         // If you change the database schema, you must increment the database version.
         private const val DATABASE_VERSION = 1
-        private const val DATABASE_NAME = "NoteApp.dp"
+        private const val DATABASE_NAME = "TaskApp.dp"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
